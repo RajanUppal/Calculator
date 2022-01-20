@@ -1,0 +1,46 @@
+/*
+C++ Program for a simple calculator
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char op;
+	float num1,num2;
+	while(1)
+	{
+		cout<<"\nChoose the Operator :\n +, -, *, /, press e to exit \n ";
+		cin>>op;
+		if((op!='+')&&(op!='-')&&(op!='*')&&(op!='/')&&(op!='e'))
+		{
+			cout<<"Your entered choice is invalid ! Please enter a valid option";
+			continue;
+		}
+		if(op=='e')
+		{
+			return 0;
+		}
+		cout<<"Enter 1st number : ";
+		cin>>num1;
+		cout<<"Enter 2nd number : ";
+		cin>>num2;
+		switch(op)
+		{
+			case '+' :
+				cout<<num1<<" + "<<num2<<" = "<<num1 + num2<<endl;
+				break;
+			case '-' :
+				cout<<num1<<" - "<<num2<<" = "<<num1 - num2<<endl;
+				break;
+			case '*' :
+				cout<<num1<<" * "<<num2<<" = "<<num1 * num2<<endl;
+				break;
+			case '/' :
+				cout<<num1<<" / "<<num2<<" = "<<num1 / num2<<endl;
+				break;
+		}
+	}
+	return 0;
+}
